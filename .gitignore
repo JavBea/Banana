@@ -1,0 +1,23 @@
+# 忽略图片文件
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.webp
+*.svg
+
+# 忽略视频文件
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.flv
+*.wmv
+*.webm
+*.mpeg
+*.mpg
+
+# 忽略指定路径的文件夹
+/output

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="ICIV Server" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="ICIV Server">
+        <serverdata>
+          <mappings>
+            <mapping deploy="~\models\OpenSTL\code\OpenSTL" local="$PROJECT_DIR$/../../models/OpenSTL/OpenSTL" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
