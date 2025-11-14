@@ -21,3 +21,4 @@
 
 # 忽略指定路径的文件夹
 /output
+/src/RadarMaster/CAPPIProcess/output
