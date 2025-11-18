@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 """
-@Description ：****** 
-@File    ：GenVideo.py
+@Description ：将指定文件夹下的所有图片合成为一个视频，并可指定帧率
+@File    ：ToVideoPic.py
 @IDE     ：PyCharm 
 @Author  ：Sean Han
 @Date    ：2025/11/13 19:09 
@@ -11,7 +11,7 @@ import cv2
 import os
 from natsort import natsorted  # 用于按自然顺序排序文件名（可选）
 
-def GenVideo(input_path, output_path, fps=10):
+def ToVideo(input_path, output_path, fps=10):
 
 
     # ==== 获取图片文件 ====
@@ -53,4 +53,6 @@ def GenVideo(input_path, output_path, fps=10):
     out.release()
     print(f"✅ 视频合成完成：{output_path}")
 
-GenVideo(input_path=r"E:\MyFiles\data\CAPPI0010\20250408",output_path=r"E:\MyFiles\data\20250408.mp4")
+
+if __name__ == "__main__":
+    ToVideo(input_path=r"E:\MyFiles\data\CAPPI0408_single_denoise1", output_path=r"E:\MyFiles\data\20250408_single_denoise1.mp4")

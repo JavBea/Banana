@@ -204,13 +204,20 @@ def make_side_by_side_video(folder1, folder2, output_path="output.mp4", fps=24):
 
 
 if __name__ == "__main__":
-    src=r"C:\Users\Me\Desktop\CAPPI\data"
-    out=r"C:\Users\Me\Desktop\CAPPI\output"
-    denoise_radar_images(
-        input_dir=src,
-        output_dir=out
-    )
-    make_side_by_side_video(src, out, r"E:\MyFiles\Projects\Banana\output/compare.mp4", fps=10)
+    # src=r"C:\Users\Me\Desktop\CAPPI\data"
+    # out=r"C:\Users\Me\Desktop\CAPPI\output"
+    # denoise_radar_images(
+    #     input_dir=src,
+    #     output_dir=out
+    # )
+    # make_side_by_side_video(src, out, r"E:\MyFiles\Projects\Banana\output/compare.mp4", fps=10)
+
+    import random
+
+    random.seed(5)
+    numbers = list(range(1, 7))
+    random.shuffle(numbers)
+    print("随机排序后的数字:", numbers)
 
 
 

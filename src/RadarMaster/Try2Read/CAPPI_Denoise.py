@@ -180,6 +180,11 @@ def save_radar_video(data, denoised_all, template=None, output_path="radar.mp4",
     if template is not None:
         im3 = axes[2].imshow(template, cmap="jet", aspect="auto")
         axes[2].set_title("噪声模板")
+
+        # 保存 axes[2] 的内容
+        extent = axes[2].get_window_extent().transformed(fig.dpi_scale_trans.inverted())
+        fig.savefig(r"E:\MyFiles\data\template.png", bbox_inches=extent, dpi=300)
+
     else:
         im3 = None
 
@@ -210,7 +215,7 @@ def denoise_by_dot():
     mode = "subtract"
 
     # 1. 读取数据
-    data = np.load(r"E:\MyFiles\Projects\Banana\output/CAPPI0408_images.npy") 
+    data = np.load(r"E:\MyFiles\data\CAPPI0408_images_gray.npy")
     print("数据维度:", data.shape)
 
     # 如果需要：将 0 替换为 NaN（表示缺测）
@@ -219,6 +224,7 @@ def denoise_by_dot():
 
     # 2. 构造噪声模板
     template = build_noise_template(data, method=method)  # (512, 480)
+    # plt.imsave(r"E:\MyFiles\Projects\Banana\output/template.png", template, cmap='viridis')
 
     # 3. 去噪所有帧
     denoised_all = np.empty_like(data, dtype=float)
