@@ -11,6 +11,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import imageio
 from io import BytesIO
+import cv2
+import os
+
 
 
 def show_npy_frame(npy_path, frame_index=0, cmap='jet'):
@@ -63,15 +66,23 @@ def npy_to_video_with_uniform_colorbar(
     fps=10,
     ignore_percent=1,
     cmap='jet',
-    dpi=100
+    dpi=100,
+    cmin=None,
+    cmax=None
 ):
     data = np.load(npy_path)  # shape = (T, H, W)
     frames, H, W = data.shape
 
     # === 计算全局色条范围（忽略 NaN） ===
     valid_values = data[np.isfinite(data)]
-    low = np.percentile(valid_values, ignore_percent)
-    high = np.percentile(valid_values, 100 - ignore_percent)
+    if cmin is None:
+        low = np.percentile(valid_values, ignore_percent)
+    else:
+        low=cmin
+    if cmax is None:
+        high = np.percentile(valid_values, 100 - ignore_percent)
+    else:
+        high=cmax
     print(f"统一色条范围: vmin={low:.3f}, vmax={high:.3f}")
 
     # === 自动调整画布尺寸，使生成图像像素可被16整除 ===
@@ -112,18 +123,107 @@ def npy_to_video_with_uniform_colorbar(
     print(f"视频已保存到: {output_video_path}")
 
 
+
+def safe_load_npy(path):
+    arr = np.load(path)
+    # 如果全部是 NaN，则返回 None
+    if np.isnan(arr).all():
+        print(f"[警告] {path} 全是 NaN，跳过")
+        return None
+
+    # 否则返回数组
+    return arr
+
+def delete_file(file_path: str) -> bool:
+    """
+    删除指定路径的文件。
+
+    参数：
+        file_path (str): 要删除的文件路径。
+
+    返回：
+        bool: 删除成功返回 True，否则返回 False。
+    """
+    try:
+        if os.path.isfile(file_path):
+            os.remove(file_path)
+            print(f"文件已删除：{file_path}")
+            return True
+        else:
+            print(f"路径不存在或不是文件：{file_path}")
+            return False
+    except Exception as e:
+        print(f"删除失败：{e}")
+        return False
+
+
+def npy_list_to_video(npy_list,output_path, a, b, cmin=-15, cmax=30, fps=10, cmap="viridis"):
+    out_list=[]
+    for path in npy_list:
+        out = path+".mp4"
+        out_list.append(out)
+        npy_to_video_with_uniform_colorbar(
+            npy_path=path,
+            output_video_path=out,
+            fps=fps,
+            ignore_percent=1,
+            cmap=cmap,
+            cmin=cmin,
+            cmax=cmax
+        )
+        print(f"{out}视频已缓存")
+    from ToOneVideo import merge_videos_grid
+
+    merge_videos_grid(
+        out_list,
+        a=a,
+        b=b,
+        output_path=output_path,
+        fill_color=(255, 255, 255)   # 白色背景
+    )
+    print(f"{output_path}视频已保存")
+
+    for out in out_list:
+        delete_file(out)
+        print(f"{out}视频已删除")
+
+
+
+
 if __name__ == '__main__':
 
-    for index in range(239):
-        show_npy_frame_ignore_percent(
-            npy_path=r"E:\MyFiles\data\CAPPI0408_images_origin_denoise0.npy",
-            frame_index=index
-        )
+    # for index in range(239):
+    #     show_npy_frame_ignore_percent(
+    #         npy_path=r"E:\MyFiles\data\CAPPI0408_images_single_denoise1.npy",
+    #         frame_index=index
+    #     )
 
     # npy_to_video_with_uniform_colorbar(
-    #     npy_path=r"E:\MyFiles\data\CAPPI0408_images_single.npy",
-    #     output_video_path=r"E:\MyFiles\data\20250408_single.mp4",
+    #     npy_path=r"E:\MyFiles\data\CAPPI0408_images_single_denoise1.v2.npy",
+    #     output_video_path=r"E:\MyFiles\data\CAPPI0408_images_single_denoise1.v2.mp4",
     #     fps=10,
     #     ignore_percent=1,
-    #     cmap="jet"
+    #     cmap="jet",
+    #     cmin=-15,
+    #     cmax=30
     # )
+
+    npy_list = [
+        r"E:\MyFiles\data\CAPPI0408_images_single.npy",
+        r"E:\MyFiles\data\CAPPI0408_images_single_denoise1.v2.npy",
+        r"E:\MyFiles\data\obsolete\20251118\CAPPI0408_images_single_denoise1.v1.npy",
+        r"E:\MyFiles\data\CAPPI0408_images_single_denoise1.v1.npy"
+    ]
+
+    npy_list_to_video(
+        npy_list=npy_list,
+        output_path=r"E:\MyFiles\data\merged.v3.mp4",
+        a=2,
+        b=2,
+        cmin=-15,
+        cmax=30,
+        fps=10,
+        cmap="viridis"
+    )
+
+

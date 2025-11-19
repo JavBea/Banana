@@ -73,16 +73,16 @@ if __name__ == "__main__":
     #     output_path=r"E:\MyFiles\data\CAPPI0408_images_single_denoise1.npy"
     # )
 
-    replace_with_zero(
-        input_path=r"E:\MyFiles\data\CAPPI0408_images_single.npy",
-        output_path=r"E:\MyFiles\data\CAPPI0408_images_single_denoise1.v1.npy"
-    )
-
-    # replace_with_zero_in_circle(
-    #     input_path=r"E:\MyFiles\data\CAPPI0408_images_single_denoise0.5.npy",
-    #     output_path=r"E:\MyFiles\data\CAPPI0408_images_single_denoise1.npy",
-    #     r=128
+    # replace_with_zero(
+    #     input_path=r"E:\MyFiles\data\CAPPI0408_images_single.npy",
+    #     output_path=r"E:\MyFiles\data\CAPPI0408_images_single_denoise1.npy"
     # )
+
+    replace_with_zero_in_circle(
+        input_path=r"E:\MyFiles\data\CAPPI0408_images_single.npy",
+        output_path=r"E:\MyFiles\data\CAPPI0408_images_single_denoise1.v2.npy",
+        r=128
+    )
 
     # from VisualizeNPY import show_npy_frame, show_npy_frame_ignore_percent
     # for i in range(0,239):

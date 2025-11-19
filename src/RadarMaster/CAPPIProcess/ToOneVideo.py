@@ -63,14 +63,19 @@ def merge_videos_grid(video_paths, a, b, output_path, fill_color=(0, 0, 0)):
     final = clips_array(grid)
     final.write_videofile(output_path, codec="libx264", audio_codec="aac")
 
-video_files = [
-    r"E:\MyFiles\data\20250408_single.mp4", r"E:\MyFiles\data\20250408_single_denoise1.mp4", r"E:\MyFiles\data\20250408_single_denoise1.v1.mp4", r"E:\MyFiles\data\20250408_single_denoise0.5.mp4"
-]
+if __name__ == "__main__":
 
-merge_videos_grid(
-    video_files,
-    a=2,
-    b=2,
-    output_path=r"E:\MyFiles\data\merged.mp4",
-    fill_color=(255, 255, 255)   # 白色背景
-)
+    video_files = [
+        r"E:\MyFiles\data\CAPPI0408_images_single.mp4",
+        r"E:\MyFiles\data\CAPPI0408_images_single_denoise1.v2.mp4",
+        r"E:\MyFiles\data\CAPPI0408_images_single_denoise1_obsolete.mp4",
+        r"E:\MyFiles\data\CAPPI0408_images_single_denoise1.v1.mp4"
+    ]
+
+    merge_videos_grid(
+        video_files,
+        a=2,
+        b=2,
+        output_path=r"E:\MyFiles\data\merged.v2.mp4",
+        fill_color=(255, 255, 255)   # 白色背景
+    )

@@ -2,7 +2,7 @@
 # -*- coding: UTF-8 -*-
 """
 @Description ：****** 
-@File    ：DenoiseCircle.py
+@File    ：RemoveCircle.py
 @IDE     ：PyCharm 
 @Author  ：Sean Han
 @Date    ：2025/11/17 14:34 
@@ -317,7 +317,7 @@ def apply_mask_and_smooth_ignore_mask_npy(input_path, mask_path, input_data=None
 
     # === 加载数据 ===
     if input_data is None:
-        video = np.load(input_path).astype(np.uint8)   # (T,H,W,3)
+        video = np.load(input_path).astype(np.float32)   # (T,H,W,3)
     else:
         video = input_data
 
@@ -419,7 +419,7 @@ def replace_dark_pixels_npy(input_path, output_path=None, input_data=None, r_th=
 
     # === 加载数据 ===
     if input_data is None:
-        video = np.load(input_path).astype(np.uint8)   # (T,H,W,3)
+        video = np.load(input_path).astype(np.float32)   # (T,H,W,3)
     else:
         video = input_data
     T, H, W, _ = video.shape
@@ -644,21 +644,21 @@ if __name__ == '__main__':
     # )
 
 
-    # 单张图片去噪
-    apply_mask_and_smooth_ignore_mask(
-        img_path=r"E:\MyFiles\data\static\CAPPI-202504081450-0010-150-Z.JPG",
-        mask_path=r"E:\MyFiles\data\static\CAPPI0408_white_yellow_circle_font.npy",
-        output_path=r"E:\MyFiles\data\aaa.JPG",
-        a=7
-    )
-
-    replace_dark_pixels(
-        img_path=r"E:\MyFiles\data\aaa.JPG",
-        output_path=r"E:\MyFiles\data\aaa.JPG",
-        r_th=100,
-        g_th=100,
-        b_th=100
-    )
+    # # 单张图片去噪
+    # apply_mask_and_smooth_ignore_mask(
+    #     img_path=r"E:\MyFiles\data\static\CAPPI-202504081450-0010-150-Z.JPG",
+    #     mask_path=r"E:\MyFiles\data\static\CAPPI0408_white_yellow_circle_font.npy",
+    #     output_path=r"E:\MyFiles\data\aaa.JPG",
+    #     a=7
+    # )
+    #
+    # replace_dark_pixels(
+    #     img_path=r"E:\MyFiles\data\aaa.JPG",
+    #     output_path=r"E:\MyFiles\data\aaa.JPG",
+    #     r_th=100,
+    #     g_th=100,
+    #     b_th=100
+    # )
 
 
     # apply_mask_and_smooth_ignore_mask_npy(
@@ -671,19 +671,11 @@ if __name__ == '__main__':
     # npy去噪
     # 三个参数，尤其是a，万不可变
     denoise_circle_fonts(
-        input_path=r"E:\MyFiles\data\CAPPI0408_images_origin.npy",
+        input_path=r"E:\MyFiles\data\static\CAPPI0408_images_origin.npy",
         mask_path=r"E:\MyFiles\data\static\CAPPI0408_white_yellow_circle_font.npy",
-        output_path=r"E:\MyFiles\data\CAPPI0408_images_origin_denoise0.npy",
+        output_path=r"E:\MyFiles\data\CAPPI0408_images_origin_v2.npy",
         a=7,
         r_th=100,
         g_th=100,
         b_th=100
     )
-
-    # for h in range(486, 491):
-    #     for w in range(7,9):
-    #         set_by_hand(r"E:\MyFiles\data\CAPPI0408_white_yellow_circle.npy",r"E:\MyFiles\data\CAPPI0408_white_yellow_circle.npy",h,w)
-    #
-    # visualize_mask_clean(
-    #     mask_path=r"E:\MyFiles\data\CAPPI0408_white_yellow_circle.npy"
-    # )

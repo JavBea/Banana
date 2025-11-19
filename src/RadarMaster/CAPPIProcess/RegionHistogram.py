@@ -75,7 +75,7 @@ def show_region_histograms(npy_path, top_left, bottom_right, frame_index=None, b
 
 
 show_region_histograms(
-    r"E:\MyFiles\data\CAPPI0408_images_gray.npy",
+    r"E:\MyFiles\data\CAPPI0408_images_single_denoise1.npy",
     top_left=(634, 483),
     bottom_right=(672, 557),
     # frame_index=10,   # 第10帧

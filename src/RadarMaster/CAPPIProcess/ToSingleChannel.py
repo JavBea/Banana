@@ -129,7 +129,7 @@ def visualize_npy_as_grayscale(npy_path, output_dir):
 
 # 示例调用
 if __name__ == "__main__":
-    input_dir=r"E:\MyFiles\data\CAPPI0408_images_origin.npy"
+    input_dir=r"E:\MyFiles\data\CAPPI0408_images_origin_v2.npy"
     output_dir=r"E:\MyFiles\data\CAPPI0408_images_single.npy"
 
     # 输出单通道数组
