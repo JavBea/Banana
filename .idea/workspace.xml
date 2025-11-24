@@ -5,16 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9e2e4ae-1651-463d-aa09-d508368efbfc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess/ToGray.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess/ToVideoNPY.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess/ChopPictures.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess/Difference.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess/DrawLines.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess/KIt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess/RemoveStripes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess/ToOnePic.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess/DenoiseCircle.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess/RemoveCircle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess/NPYDenoise.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess/NPYDenoise.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess/RGB2Gray.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess/RGB2Gray.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess/RegionHistogram.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess/RegionHistogram.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess/ToOneVideo.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess/ToOneVideo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess/ToSingleChannel.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess/ToSingleChannel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess/RegionVisualize.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess/RegionVisualize.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess/RemoveCircle.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess/RemoveCircle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess/ToVideoNPY.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess/ToVideoNPY.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess/VisualizeNPY.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess/VisualizeNPY.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RadarMaster/Try.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/RadarMaster/Try.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,95 +51,101 @@
     <option name="sortByType" value="true" />
     <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;Python.2DVisualizeLocal.executor&quot;: &quot;Run&quot;,
-    &quot;Python.3DVisualize.executor&quot;: &quot;Run&quot;,
-    &quot;Python.3DVisualizeLocal.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ARD.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ARFAnalyst.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Analyst.executor&quot;: &quot;Run&quot;,
-    &quot;Python.AssemblyLine.executor&quot;: &quot;Run&quot;,
-    &quot;Python.AudioVideoCombiner.executor&quot;: &quot;Run&quot;,
-    &quot;Python.BalloonTrackDrawer.executor&quot;: &quot;Run&quot;,
-    &quot;Python.BatchExtract.executor&quot;: &quot;Run&quot;,
-    &quot;Python.BatchProcess.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Bin.executor&quot;: &quot;Run&quot;,
-    &quot;Python.CAPPI.executor&quot;: &quot;Run&quot;,
-    &quot;Python.CAPPI_Brief.executor&quot;: &quot;Run&quot;,
-    &quot;Python.CAPPI_Denoise.executor&quot;: &quot;Run&quot;,
-    &quot;Python.CAPPI_Mapping.executor&quot;: &quot;Run&quot;,
-    &quot;Python.CR.executor&quot;: &quot;Run&quot;,
-    &quot;Python.CR_2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.CR_Brief.executor&quot;: &quot;Run&quot;,
-    &quot;Python.CR_Mapping.executor&quot;: &quot;Run&quot;,
-    &quot;Python.CS.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ChopVideo.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Deleter.executor&quot;: &quot;Run&quot;,
-    &quot;Python.DenoiseCircle.executor&quot;: &quot;Run&quot;,
-    &quot;Python.DrawCircle.executor&quot;: &quot;Run&quot;,
-    &quot;Python.EBPPI.executor&quot;: &quot;Run&quot;,
-    &quot;Python.EBPPI_2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.EBPPI_Brief.executor&quot;: &quot;Run&quot;,
-    &quot;Python.EBPPI_Mapping.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ETPPI.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ETPPI_Brief.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ETPPI_Mapping.executor&quot;: &quot;Run&quot;,
-    &quot;Python.EstimateGranularity.executor&quot;: &quot;Run&quot;,
-    &quot;Python.FetchBalloonData.executor&quot;: &quot;Run&quot;,
-    &quot;Python.FindCircle.executor&quot;: &quot;Run&quot;,
-    &quot;Python.FolderListener.executor&quot;: &quot;Run&quot;,
-    &quot;Python.FolderMonitor.executor&quot;: &quot;Run&quot;,
-    &quot;Python.GenVideo.executor&quot;: &quot;Run&quot;,
-    &quot;Python.GetRGB.executor&quot;: &quot;Run&quot;,
-    &quot;Python.HAIL.executor&quot;: &quot;Run&quot;,
-    &quot;Python.HAIL_Brief.executor&quot;: &quot;Run&quot;,
-    &quot;Python.HAIL_Mapping.executor&quot;: &quot;Run&quot;,
-    &quot;Python.HexAnalyst.executor&quot;: &quot;Run&quot;,
-    &quot;Python.HoleFiller.executor&quot;: &quot;Run&quot;,
-    &quot;Python.NPYDenoise.executor&quot;: &quot;Run&quot;,
-    &quot;Python.NoiseAnalysis.executor&quot;: &quot;Run&quot;,
-    &quot;Python.RGB2Gray.executor&quot;: &quot;Run&quot;,
-    &quot;Python.RadarMaster.executor&quot;: &quot;Run&quot;,
-    &quot;Python.RegionHistogram.executor&quot;: &quot;Run&quot;,
-    &quot;Python.RegionVisualize.executor&quot;: &quot;Run&quot;,
-    &quot;Python.RemoveCircle.executor&quot;: &quot;Run&quot;,
-    &quot;Python.SWP.executor&quot;: &quot;Run&quot;,
-    &quot;Python.SWP_Brief.executor&quot;: &quot;Run&quot;,
-    &quot;Python.SWP_Mapping.executor&quot;: &quot;Run&quot;,
-    &quot;Python.SplitMat.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ToGray.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ToMat.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ToOneVideo.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ToSingleChannel.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ToVideoNPY.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ToVideoPic.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Try.executor&quot;: &quot;Run&quot;,
-    &quot;Python.VIL.executor&quot;: &quot;Run&quot;,
-    &quot;Python.VOL.executor&quot;: &quot;Run&quot;,
-    &quot;Python.VisualizeLocal2D.executor&quot;: &quot;Run&quot;,
-    &quot;Python.VisualizeMat.executor&quot;: &quot;Run&quot;,
-    &quot;Python.VisualizeNPY.executor&quot;: &quot;Run&quot;,
-    &quot;Python.VisualizeNegative.executor&quot;: &quot;Run&quot;,
-    &quot;Python.aaa.executor&quot;: &quot;Run&quot;,
-    &quot;Python.tc_to_csv_batch.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/MyFiles/data&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "Python.2DVisualizeLocal.executor": "Run",
+    "Python.3DVisualize.executor": "Run",
+    "Python.3DVisualizeLocal.executor": "Run",
+    "Python.ARD.executor": "Run",
+    "Python.ARFAnalyst.executor": "Run",
+    "Python.Analyst.executor": "Run",
+    "Python.AssemblyLine.executor": "Run",
+    "Python.AudioVideoCombiner.executor": "Run",
+    "Python.BalloonTrackDrawer.executor": "Run",
+    "Python.BatchExtract.executor": "Run",
+    "Python.BatchProcess.executor": "Run",
+    "Python.Bin.executor": "Run",
+    "Python.CAPPI.executor": "Run",
+    "Python.CAPPI_Brief.executor": "Run",
+    "Python.CAPPI_Denoise.executor": "Run",
+    "Python.CAPPI_Mapping.executor": "Run",
+    "Python.CR.executor": "Run",
+    "Python.CR_2.executor": "Run",
+    "Python.CR_Brief.executor": "Run",
+    "Python.CR_Mapping.executor": "Run",
+    "Python.CS.executor": "Run",
+    "Python.ChopPictures.executor": "Run",
+    "Python.ChopVideo.executor": "Run",
+    "Python.Deleter.executor": "Run",
+    "Python.DenoiseCircle.executor": "Run",
+    "Python.Difference.executor": "Run",
+    "Python.DrawCircle.executor": "Run",
+    "Python.DrawLines.executor": "Run",
+    "Python.EBPPI.executor": "Run",
+    "Python.EBPPI_2.executor": "Run",
+    "Python.EBPPI_Brief.executor": "Run",
+    "Python.EBPPI_Mapping.executor": "Run",
+    "Python.ETPPI.executor": "Run",
+    "Python.ETPPI_Brief.executor": "Run",
+    "Python.ETPPI_Mapping.executor": "Run",
+    "Python.EstimateGranularity.executor": "Run",
+    "Python.FetchBalloonData.executor": "Run",
+    "Python.FindCircle.executor": "Run",
+    "Python.FolderListener.executor": "Run",
+    "Python.FolderMonitor.executor": "Run",
+    "Python.GenVideo.executor": "Run",
+    "Python.GetRGB.executor": "Run",
+    "Python.HAIL.executor": "Run",
+    "Python.HAIL_Brief.executor": "Run",
+    "Python.HAIL_Mapping.executor": "Run",
+    "Python.HexAnalyst.executor": "Run",
+    "Python.HoleFiller.executor": "Run",
+    "Python.KIt.executor": "Run",
+    "Python.NPYDenoise.executor": "Run",
+    "Python.NoiseAnalysis.executor": "Run",
+    "Python.RGB2Gray.executor": "Run",
+    "Python.RadarMaster.executor": "Run",
+    "Python.RegionHistogram.executor": "Run",
+    "Python.RegionVisualize.executor": "Run",
+    "Python.RemoveCircle.executor": "Run",
+    "Python.RemoveStripes.executor": "Run",
+    "Python.SWP.executor": "Run",
+    "Python.SWP_Brief.executor": "Run",
+    "Python.SWP_Mapping.executor": "Run",
+    "Python.SplitMat.executor": "Run",
+    "Python.Test.executor": "Run",
+    "Python.ToGray.executor": "Run",
+    "Python.ToMat.executor": "Run",
+    "Python.ToOnePic.executor": "Run",
+    "Python.ToOneVideo.executor": "Run",
+    "Python.ToSingleChannel.executor": "Run",
+    "Python.ToVideoNPY.executor": "Run",
+    "Python.ToVideoPic.executor": "Run",
+    "Python.Try.executor": "Run",
+    "Python.VIL.executor": "Run",
+    "Python.VOL.executor": "Run",
+    "Python.VisualizeLocal2D.executor": "Run",
+    "Python.VisualizeMat.executor": "Run",
+    "Python.VisualizeNPY.executor": "Run",
+    "Python.VisualizeNegative.executor": "Run",
+    "Python.aaa.executor": "Run",
+    "Python.tc_to_csv_batch.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "E:/MyFiles/data/Histograms",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\MyFiles\Projects\Banana\src\RadarMaster\CAPPIProcess" />
@@ -210,7 +220,7 @@
       <workItem from="1763031657266" duration="80000" />
       <workItem from="1763031992723" duration="45632000" />
       <workItem from="1763357511451" duration="36658000" />
-      <workItem from="1763472134933" duration="5650000" />
+      <workItem from="1763472134933" duration="55467000" />
     </task>
     <servers />
   </component>
@@ -218,10 +228,10 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Banana$ToVideoNPY.coverage" NAME="ToVideoNPY Coverage Results" MODIFIED="1763456525429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
+    <SUITE FILE_PATH="coverage/Banana$ToVideoNPY.coverage" NAME="ToVideoNPY Coverage Results" MODIFIED="1763789890100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
     <SUITE FILE_PATH="coverage/Banana$tc_to_csv_batch.coverage" NAME="tc_to_csv_batch Coverage Results" MODIFIED="1757127462655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster" />
     <SUITE FILE_PATH="coverage/Banana$EstimateGranularity.coverage" NAME="EstimateGranularity Coverage Results" MODIFIED="1756814520969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/Banana$RegionVisualize.coverage" NAME="RegionVisualize Coverage Results" MODIFIED="1763186070495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
+    <SUITE FILE_PATH="coverage/Banana$RegionVisualize.coverage" NAME="RegionVisualize Coverage Results" MODIFIED="1763965270078" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
     <SUITE FILE_PATH="coverage/Banana$ETPPI_Mapping.coverage" NAME="ETPPI_Mapping Coverage Results" MODIFIED="1757737140467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster" />
     <SUITE FILE_PATH="coverage/Banana$HAIL.coverage" NAME="HAIL Coverage Results" MODIFIED="1757397507777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster" />
     <SUITE FILE_PATH="coverage/Banana$CR_Mapping.coverage" NAME="CR_Mapping Coverage Results" MODIFIED="1757732278590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster" />
@@ -229,30 +239,34 @@
     <SUITE FILE_PATH="coverage/Banana$ToOneVideo.coverage" NAME="ToOneVideo Coverage Results" MODIFIED="1763520556530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
     <SUITE FILE_PATH="coverage/Banana$aaa.coverage" NAME="aaa Coverage Results" MODIFIED="1757321908268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster" />
     <SUITE FILE_PATH="coverage/Banana$BatchProcess.coverage" NAME="BatchProcess Coverage Results" MODIFIED="1759308465041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/BatchProcess" />
-    <SUITE FILE_PATH="coverage/Banana$Try.coverage" NAME="Try Coverage Results" MODIFIED="1763368584754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster" />
+    <SUITE FILE_PATH="coverage/Banana$Try.coverage" NAME="Try Coverage Results" MODIFIED="1763705000632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster" />
     <SUITE FILE_PATH="coverage/Banana$Deleter.coverage" NAME="Deleter Coverage Results" MODIFIED="1757322003352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster" />
     <SUITE FILE_PATH="coverage/Banana$HoleFiller.coverage" NAME="HoleFiller Coverage Results" MODIFIED="1761221937620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/Try2Read" />
     <SUITE FILE_PATH="coverage/Banana$CAPPI_Mapping.coverage" NAME="CAPPI_Mapping Coverage Results" MODIFIED="1758698735043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/Try2Read" />
     <SUITE FILE_PATH="coverage/Banana$VOL.coverage" NAME="VOL Coverage Results" MODIFIED="1757739907051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster" />
+    <SUITE FILE_PATH="coverage/Banana$DrawLines.coverage" NAME="DrawLines Coverage Results" MODIFIED="1763557793556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
     <SUITE FILE_PATH="coverage/Banana$CS.coverage" NAME="CS Coverage Results" MODIFIED="1757733681022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster" />
     <SUITE FILE_PATH="coverage/Banana$ARFAnalyst.coverage" NAME="ARFAnalyst Coverage Results" MODIFIED="1757124626549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster" />
     <SUITE FILE_PATH="coverage/Banana$VisualizeMat.coverage" NAME="VisualizeMat Coverage Results" MODIFIED="1763089125168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
     <SUITE FILE_PATH="coverage/Banana$GetRGB.coverage" NAME="GetRGB Coverage Results" MODIFIED="1762763033563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
     <SUITE FILE_PATH="coverage/Banana$ToGray.coverage" NAME="ToGray Coverage Results" MODIFIED="1763455686942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
+    <SUITE FILE_PATH="coverage/Banana$ChopPictures.coverage" NAME="ChopPictures Coverage Results" MODIFIED="1763710587586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
+    <SUITE FILE_PATH="coverage/Banana$RemoveStripes.coverage" NAME="RemoveStripes Coverage Results" MODIFIED="1763789805682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
     <SUITE FILE_PATH="coverage/Banana$ChopVideo.coverage" NAME="ChopVideo Coverage Results" MODIFIED="1763034261617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
     <SUITE FILE_PATH="coverage/Banana$HAIL_Brief.coverage" NAME="HAIL_Brief Coverage Results" MODIFIED="1758697770393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/Try2Read" />
-    <SUITE FILE_PATH="coverage/Banana$VisualizeNPY.coverage" NAME="VisualizeNPY Coverage Results" MODIFIED="1763521763895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
+    <SUITE FILE_PATH="coverage/Banana$VisualizeNPY.coverage" NAME="VisualizeNPY Coverage Results" MODIFIED="1763789971430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
     <SUITE FILE_PATH="coverage/Banana$Analyst.coverage" NAME="Analyst Coverage Results" MODIFIED="1757322044206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster" />
     <SUITE FILE_PATH="coverage/Banana$3DVisualize.coverage" NAME="3DVisualize Coverage Results" MODIFIED="1763037928185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
     <SUITE FILE_PATH="coverage/Banana$2DVisualizeLocal.coverage" NAME="2DVisualizeLocal Coverage Results" MODIFIED="1763039867687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
     <SUITE FILE_PATH="coverage/Banana$CR_Brief.coverage" NAME="CR_Brief Coverage Results" MODIFIED="1757925491087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster" />
+    <SUITE FILE_PATH="coverage/Banana$ToOnePic.coverage" NAME="ToOnePic Coverage Results" MODIFIED="1763723284426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
     <SUITE FILE_PATH="coverage/Banana$EBPPI_Mapping.coverage" NAME="EBPPI_Mapping Coverage Results" MODIFIED="1757734460569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster" />
     <SUITE FILE_PATH="coverage/Banana$BalloonTrackDrawer.coverage" NAME="BalloonTrackDrawer Coverage Results" MODIFIED="1756779414757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Banana$HAIL_Mapping.coverage" NAME="HAIL_Mapping Coverage Results" MODIFIED="1758698035448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/Try2Read" />
     <SUITE FILE_PATH="coverage/Banana$AssemblyLine.coverage" NAME="AssemblyLine Coverage Results" MODIFIED="1758173411638" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/BatchPreProcess" />
-    <SUITE FILE_PATH="coverage/Banana$RemoveCircle.coverage" NAME="RemoveCircle Coverage Results" MODIFIED="1763457176274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
+    <SUITE FILE_PATH="coverage/Banana$RemoveCircle.coverage" NAME="RemoveCircle Coverage Results" MODIFIED="1763787491941" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
     <SUITE FILE_PATH="coverage/Banana$FetchBalloonData.coverage" NAME="FetchBalloonData Coverage Results" MODIFIED="1756801905241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/Banana$RegionHistogram.coverage" NAME="RegionHistogram Coverage Results" MODIFIED="1763472538004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
+    <SUITE FILE_PATH="coverage/Banana$RegionHistogram.coverage" NAME="RegionHistogram Coverage Results" MODIFIED="1763781586505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
     <SUITE FILE_PATH="coverage/Banana$ToVideoPic.coverage" NAME="ToVideoPic Coverage Results" MODIFIED="1763173867180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
     <SUITE FILE_PATH="coverage/Banana$BatchExtract.coverage" NAME="BatchExtract Coverage Results" MODIFIED="1757295752019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Banana$SWP.coverage" NAME="SWP Coverage Results" MODIFIED="1757673737870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster" />
@@ -265,12 +279,13 @@
     <SUITE FILE_PATH="coverage/Banana$Test.coverage" NAME="Test Coverage Results" MODIFIED="1761211577918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIPreprocess" />
     <SUITE FILE_PATH="coverage/Banana$DenoiseCircle.coverage" NAME="DenoiseCircle Coverage Results" MODIFIED="1763453249274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
     <SUITE FILE_PATH="coverage/Banana$Bin.coverage" NAME="Bin Coverage Results" MODIFIED="1759309085242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIPreprocess" />
-    <SUITE FILE_PATH="coverage/Banana$NPYDenoise.coverage" NAME="NPYDenoise Coverage Results" MODIFIED="1763518190825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
+    <SUITE FILE_PATH="coverage/Banana$NPYDenoise.coverage" NAME="NPYDenoise Coverage Results" MODIFIED="1763788645643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
     <SUITE FILE_PATH="coverage/Banana$FolderListener.coverage" NAME="FolderListener Coverage Results" MODIFIED="1758011860911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/BatchPreProcess" />
     <SUITE FILE_PATH="coverage/Banana$CAPPI_Brief.coverage" NAME="CAPPI_Brief Coverage Results" MODIFIED="1759283984501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/Try2Read" />
     <SUITE FILE_PATH="coverage/Banana$AudioVideoCombiner.coverage" NAME="AudioVideoCombiner Coverage Results" MODIFIED="1752892898312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Banana$CAPPI_Denoise.coverage" NAME="CAPPI_Denoise Coverage Results" MODIFIED="1763433309713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/Try2Read" />
     <SUITE FILE_PATH="coverage/Banana$FindCircle.coverage" NAME="FindCircle Coverage Results" MODIFIED="1763446390936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
+    <SUITE FILE_PATH="coverage/Banana$KIt.coverage" NAME="KIt Coverage Results" MODIFIED="1763780377692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
     <SUITE FILE_PATH="coverage/Banana$CR.coverage" NAME="CR Coverage Results" MODIFIED="1757680039349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster" />
     <SUITE FILE_PATH="coverage/Banana$FolderMonitor.coverage" NAME="FolderMonitor Coverage Results" MODIFIED="1758876331366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/BatchProcess" />
     <SUITE FILE_PATH="coverage/Banana$3DVisualizeLocal.coverage" NAME="3DVisualizeLocal Coverage Results" MODIFIED="1763039790232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
@@ -283,6 +298,7 @@
     <SUITE FILE_PATH="coverage/Banana$VisualizeNegative.coverage" NAME="VisualizeNegative Coverage Results" MODIFIED="1763356896716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
     <SUITE FILE_PATH="coverage/Banana$ETPPI_Brief.coverage" NAME="ETPPI_Brief Coverage Results" MODIFIED="1757737009690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster" />
     <SUITE FILE_PATH="coverage/Banana$ToMat.coverage" NAME="ToMat Coverage Results" MODIFIED="1763028674197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
+    <SUITE FILE_PATH="coverage/Banana$Difference.coverage" NAME="Difference Coverage Results" MODIFIED="1763724525864" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
     <SUITE FILE_PATH="coverage/Banana$CR_2.coverage" NAME="CR_2 Coverage Results" MODIFIED="1757383873454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster" />
     <SUITE FILE_PATH="coverage/Banana$NoiseAnalysis.coverage" NAME="NoiseAnalysis Coverage Results" MODIFIED="1762777734772" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />
     <SUITE FILE_PATH="coverage/Banana$VisualizeLocal2D.coverage" NAME="VisualizeLocal2D Coverage Results" MODIFIED="1763100004319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/RadarMaster/CAPPIProcess" />

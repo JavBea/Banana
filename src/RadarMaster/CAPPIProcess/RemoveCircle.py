@@ -639,26 +639,26 @@ if __name__ == '__main__':
     #     )
     #
     # visualize_mask_clean(
-    #     mask_path=r"E:\MyFiles\data\CAPPI0408_white_yellow_circle_font.npy",
+    #     mask_path=r"E:\MyFiles\data\static\CAPPI0408_white_yellow_circle_font.npy",
     #     save_path=r"E:\MyFiles\data\CAPPI0408_white_yellow_circle_font.jpg"
     # )
 
 
-    # # 单张图片去噪
-    # apply_mask_and_smooth_ignore_mask(
-    #     img_path=r"E:\MyFiles\data\static\CAPPI-202504081450-0010-150-Z.JPG",
-    #     mask_path=r"E:\MyFiles\data\static\CAPPI0408_white_yellow_circle_font.npy",
-    #     output_path=r"E:\MyFiles\data\aaa.JPG",
-    #     a=7
-    # )
-    #
-    # replace_dark_pixels(
-    #     img_path=r"E:\MyFiles\data\aaa.JPG",
-    #     output_path=r"E:\MyFiles\data\aaa.JPG",
-    #     r_th=100,
-    #     g_th=100,
-    #     b_th=100
-    # )
+    # 单张图片去噪
+    apply_mask_and_smooth_ignore_mask(
+        img_path=r"E:\MyFiles\data\static\CAPPI-202504080000-0010-150-Z.JPG",
+        mask_path=r"E:\MyFiles\data\static\CAPPI0408_white_yellow_circle_font.npy",
+        output_path=r"E:\MyFiles\data\ccc.JPG",
+        a=7
+    )
+
+    replace_dark_pixels(
+        img_path=r"E:\MyFiles\data\ccc.JPG",
+        output_path=r"E:\MyFiles\data\ccc.JPG",
+        r_th=100,
+        g_th=100,
+        b_th=100
+    )
 
 
     # apply_mask_and_smooth_ignore_mask_npy(
@@ -668,14 +668,14 @@ if __name__ == '__main__':
     #     a=3
     # )
 
-    # npy去噪
-    # 三个参数，尤其是a，万不可变
-    denoise_circle_fonts(
-        input_path=r"E:\MyFiles\data\static\CAPPI0408_images_origin.npy",
-        mask_path=r"E:\MyFiles\data\static\CAPPI0408_white_yellow_circle_font.npy",
-        output_path=r"E:\MyFiles\data\CAPPI0408_images_origin_v2.npy",
-        a=7,
-        r_th=100,
-        g_th=100,
-        b_th=100
-    )
+    # # npy去噪
+    # # 三个参数，尤其是a，万不可变
+    # denoise_circle_fonts(
+    #     input_path=r"E:\MyFiles\data\static\CAPPI0408_images_origin.npy",
+    #     mask_path=r"E:\MyFiles\data\static\CAPPI0408_white_yellow_circle_font.npy",
+    #     output_path=r"E:\MyFiles\data\CAPPI0408_images_origin_v2.npy",
+    #     a=7,
+    #     r_th=100,
+    #     g_th=100,
+    #     b_th=100
+    # )

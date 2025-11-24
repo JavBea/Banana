@@ -47,4 +47,4 @@ def gray_npy_to_video(input_npy_path, output_video_path, fps=25):
     print(f"视频已生成：{output_video_path}")
 
 if __name__ == '__main__':
-    gray_npy_to_video(r"E:\MyFiles\data\CAPPI0408_images_single.npy", r"E:\MyFiles\data\CAPPI0408_images_single.mp4", fps=10)
+    gray_npy_to_video(r"E:\MyFiles\data\CAPPI0408_images_single_denoise2.npy", r"E:\MyFiles\data\CAPPI0408_images_single_denoise2.mp4", fps=10)

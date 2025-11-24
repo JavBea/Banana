@@ -212,12 +212,23 @@ if __name__ == "__main__":
     # )
     # make_side_by_side_video(src, out, r"E:\MyFiles\Projects\Banana\output/compare.mp4", fps=10)
 
-    import random
+    # import random
+    #
+    # random.seed(5)
+    # numbers = list(range(1, 7))
+    # random.shuffle(numbers)
+    # print("随机排序后的数字:", numbers)
 
-    random.seed(5)
-    numbers = list(range(1, 7))
-    random.shuffle(numbers)
-    print("随机排序后的数字:", numbers)
+    # data=np.load(r"E:\MyFiles\data\CAPPI0408_images_single.npy")
+    # np.save(
+    #     file=r"E:\MyFiles\data\CAPPI0408_images_single_sample.npy",
+    #     arr=data[0]
+    # )
+    # data=np.load(r"E:\MyFiles\data\CAPPI0408_images_single_sample.npy")
+    # print(data.shape)
+
+    for a in range(0,100000000,5):
+        print(a)
 
 
 

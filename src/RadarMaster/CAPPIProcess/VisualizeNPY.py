@@ -42,6 +42,7 @@ def show_npy_frame_ignore_percent(npy_path, frame_index=0, ignore_percent=1, cma
         ignore_percent: 忽略的百分比（上下各 ignore_percent）
         cmap: 色图
     """
+
     data = np.load(npy_path)
     frame = data[frame_index]
 
@@ -58,6 +59,35 @@ def show_npy_frame_ignore_percent(npy_path, frame_index=0, ignore_percent=1, cma
     plt.colorbar()
     plt.show()
 
+def show_single_npy_frame_ignore_percent(npy_path=None, npy=None, ignore_percent=1, cmap='jet'):
+    """
+    可视化 .npy 文件中的单帧图像。
+    自动忽略上下 ignore_percent% 的值（默认 1%），使色彩更易观察。
+
+    参数:
+        npy_path: npy 文件路径
+        npy: 直接传入npy数组，此时忽略npy_path参数
+        frame_index: 要显示的帧编号
+        ignore_percent: 忽略的百分比（上下各 ignore_percent）
+        cmap: 色图
+    """
+    if npy is not None:
+        data = npy
+    else:
+        data = np.load(npy_path)
+
+    # 忽略 NaN
+    valid_values = data[np.isfinite(data)]
+
+    # 计算上下1%分位数
+    low = np.percentile(valid_values, ignore_percent)
+    high = np.percentile(valid_values, 100 - ignore_percent)
+
+    plt.figure(figsize=(6, 6))
+    plt.imshow(data, cmap=cmap, vmin=low, vmax=high)
+    plt.title(f"(ignore top/bottom {ignore_percent}%)")
+    plt.colorbar()
+    plt.show()
 
 
 def npy_to_video_with_uniform_colorbar(
@@ -198,32 +228,38 @@ if __name__ == '__main__':
     #         frame_index=index
     #     )
 
-    # npy_to_video_with_uniform_colorbar(
-    #     npy_path=r"E:\MyFiles\data\CAPPI0408_images_single_denoise1.v2.npy",
-    #     output_video_path=r"E:\MyFiles\data\CAPPI0408_images_single_denoise1.v2.mp4",
-    #     fps=10,
-    #     ignore_percent=1,
-    #     cmap="jet",
+    npy_to_video_with_uniform_colorbar(
+        npy_path=r"E:\MyFiles\data\CAPPI0408_images_single_denoise2.npy",
+        output_video_path=r"E:\MyFiles\data\CAPPI0408_images_single_denoise2.mp4",
+        fps=10,
+        ignore_percent=1,
+        cmap="jet",
+        cmin=-15,
+        cmax=30
+    )
+
+    # npy_list = [
+    #     r"E:\MyFiles\data\CAPPI0408_images_single.npy",
+    #     r"E:\MyFiles\data\CAPPI0408_images_single_denoise1.v2.npy",
+    #     r"E:\MyFiles\data\CAPPI0408_images_single_denoise0.5.npy",
+    #     r"E:\MyFiles\data\CAPPI0408_images_single_denoise1.v1.npy"
+    # ]
+    #
+    # npy_list_to_video(
+    #     npy_list=npy_list,
+    #     output_path=r"E:\MyFiles\data\merged.v4.mp4",
+    #     a=2,
+    #     b=2,
     #     cmin=-15,
-    #     cmax=30
+    #     cmax=30,
+    #     fps=10,
+    #     cmap="jet"
     # )
 
-    npy_list = [
-        r"E:\MyFiles\data\CAPPI0408_images_single.npy",
-        r"E:\MyFiles\data\CAPPI0408_images_single_denoise1.v2.npy",
-        r"E:\MyFiles\data\obsolete\20251118\CAPPI0408_images_single_denoise1.v1.npy",
-        r"E:\MyFiles\data\CAPPI0408_images_single_denoise1.v1.npy"
-    ]
-
-    npy_list_to_video(
-        npy_list=npy_list,
-        output_path=r"E:\MyFiles\data\merged.v3.mp4",
-        a=2,
-        b=2,
-        cmin=-15,
-        cmax=30,
-        fps=10,
-        cmap="viridis"
-    )
+    # show_single_npy_frame_ignore_percent(
+    #     npy_path=r"E:\MyFiles\data\sector_mask.npy"
+    # )
+    # data = np.load(r"E:\MyFiles\data\distance_map.npy")
+    # print(data[332,586])
 
 

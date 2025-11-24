@@ -10,6 +10,24 @@
 
 import numpy as np
 
+# step0.5
+def replace_negative_zero(input_path, output_path):
+    """
+    读取 npy 文件，将所有 负数 替换为 NaN，不处理 NaN，并保存到指定位置。
+    """
+    # 读取数据
+    data = np.load(input_path)
+
+    # 将负数置 0
+    data[data < 0] = np.nan
+
+    # 保存处理后的数据
+    np.save(output_path, data)
+
+    print(f"处理完成：保存到 {output_path}")
+
+    return data
+
 # step1.v1
 def replace_with_zero(input_path, output_path):
     """
@@ -68,15 +86,16 @@ def replace_with_zero_in_circle(input_path, output_path, r):
 
 
 if __name__ == "__main__":
-    # replace_nan_zero(
-    #     input_path=r"E:\MyFiles\data\CAPPI0408_images_single.npy",
-    #     output_path=r"E:\MyFiles\data\CAPPI0408_images_single_denoise1.npy"
-    # )
 
-    # replace_with_zero(
-    #     input_path=r"E:\MyFiles\data\CAPPI0408_images_single.npy",
-    #     output_path=r"E:\MyFiles\data\CAPPI0408_images_single_denoise1.npy"
-    # )
+    replace_negative_zero(
+        input_path=r"E:\MyFiles\data\CAPPI0408_images_single.npy",
+        output_path=r"E:\MyFiles\data\CAPPI0408_images_single_denoise0.5.npy"
+    )
+
+    replace_with_zero(
+        input_path=r"E:\MyFiles\data\CAPPI0408_images_single.npy",
+        output_path=r"E:\MyFiles\data\CAPPI0408_images_single_denoise1.v1.npy"
+    )
 
     replace_with_zero_in_circle(
         input_path=r"E:\MyFiles\data\CAPPI0408_images_single.npy",
